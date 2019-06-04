@@ -8,7 +8,8 @@ import { setCities } from '../actions';
 
 function  mapDispatchToProps(dispatch) {
   return bindActionCreators(
-  { setCities: setCities }
+  { setCities: setCities },
+  dispatch
   );
 }
 

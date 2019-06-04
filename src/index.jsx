@@ -13,12 +13,25 @@ import citiesReducer from './reducers/cities_reducer';
 // State and reducers
 const reducers = combineReducers({
   changeMe: (state = null, action) => state
+  cities:
+  cityActive: cityReducer // new redux state key
 
 });
 
 // new reducers
 const cities = combineReducers({
 cities: // i guues i have to create another folder and call it
+});
+
+
+//add a new redux state key
+const cityActive = combineReducers({
+
+});
+
+// new reducer for the action
+const active = combineReducers({
+
 });
 
 // render an instance of the component in the DOM
