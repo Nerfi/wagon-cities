@@ -3,6 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
+//lewagon
+import reducers from './reducers';
 
 // internal modules
 import App from './components/app';
@@ -17,6 +19,9 @@ const reducers = combineReducers({
   cityActive: cityReducer // new redux state key
 
 });
+
+
+
 
 // new reducers
 const cities = combineReducers({
@@ -40,4 +45,28 @@ ReactDOM.render(
     <App />
   </Provider>,
   document.getElementById('root')
+);
+
+
+
+//lewagon code
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+// why?
+import reducers from './reducers';
+
+// internal modules
+import App from './components/app';
+import '../assets/stylesheets/application.scss';
+
+// render an instance of the component in the DOM
+ReactDOM.render(
+  <Provider store={createStore(reducers)}>
+    <App />
+  </Provider>,
+  document.querySelector('.container')
 );

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-//redux maging to connect adn bind
+//redux maging to connect and bind
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { setCities } from '../actions';

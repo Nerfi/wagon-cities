@@ -6,3 +6,13 @@ if (state === null){
 };
 
 export default cityReducer;
+
+
+export default function(state, action) {
+  switch(action.type) {
+    case 'SET_ACTIVE_CITY':
+    return action.payload;
+    default:
+    return state;
+  }
+}
