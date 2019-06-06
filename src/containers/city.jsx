@@ -47,3 +47,34 @@ class City extends  Component {
 //export default City;
 
 export default connect(null, mapDispatchToProps)(City);
+
+
+//lewagon solution
+
+import React from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+
+// we import the function
+import selectCity from '../actions/index';
+
+const City = (props) => {
+  return(
+    <li
+    className="list-group-item"
+      onClick={() => props.selectCity(props.city)}
+    >{props.city.name}</li>
+
+    );
+};
+
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ selectCity }, dispatch);
+
+}
+
+
+export default connect(null, mapStateToProps)(city);
+

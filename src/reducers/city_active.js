@@ -1,3 +1,5 @@
+// el nombre de la carpeta esta mal, esta pasa a ser
+//active_city_reducer.js
 const cityReducer = (state, action) => {
 if (state === null){
   return [];// return an empy array.

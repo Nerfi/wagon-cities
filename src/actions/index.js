@@ -18,3 +18,13 @@ export function setCities(){
       payload: city
      }
  }
+
+
+//lewasgon solution and order for redux nº1
+
+export default function selectCity(city) {
+  return {
+    type: 'CITY_SELECTED',
+    payload: city
+  };
+}
